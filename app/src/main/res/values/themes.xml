@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.BlockChainPrac" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+<!--        <item name="colorPrimary">#B7202E</item>-->
+
+<!--        <item name="colorOnPrimary">#B7202E</item>-->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.BlockChainPrac" parent="Base.Theme.BlockChainPrac" />
+</resources>

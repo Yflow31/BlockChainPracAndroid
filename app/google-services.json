@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "834336260897",
+    "project_id": "zinc-code-419409",
+    "storage_bucket": "zinc-code-419409.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:834336260897:android:060ece8d680673d4153460",
+        "android_client_info": {
+          "package_name": "com.example.BlockChain"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOaPD9LVY2-hDyiIPk2p7elhi_6KzU5So"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:834336260897:android:31f58b97a9a222b3153460",
+        "android_client_info": {
+          "package_name": "com.example.blockchainprac"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOaPD9LVY2-hDyiIPk2p7elhi_6KzU5So"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
