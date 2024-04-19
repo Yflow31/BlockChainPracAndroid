@@ -7,5 +7,8 @@ public class AppConstants {
     public static final String DETAILS = "Details";
 
 
+    public static final String ADMINEMAIL = "aniket.sartan@somaiya.edu";
+
+
 
 }

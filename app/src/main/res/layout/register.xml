@@ -3,49 +3,51 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="60dp"
-    android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Register">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
+        android:hint="Register"
         android:textAlignment="center"
         android:textSize="40dp"
-        android:hint="Register"
-        />
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/rgemail"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:hint="Your Email"
         android:inputType="textEmailAddress" />
 
     <EditText
         android:id="@+id/rgpassword"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:hint="Password"
         android:inputType="textPassword" />
 
     <Button
         android:id="@+id/registerbtn"
-        android:layout_marginTop="10dp"
+        style="@style/Widget.App.Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Register"/>
+        android:layout_marginTop="10dp"
+        android:text="Register" />
 
     <Button
         android:id="@+id/regtologin"
-        android:layout_marginTop="10dp"
+        style="@style/Widget.App.Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login"/>
+        android:layout_marginTop="10dp"
+        android:text="Login" />
 
 
 </LinearLayout>

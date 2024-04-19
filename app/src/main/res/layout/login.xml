@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     android:padding="60dp"
     tools:context=".Login">
 
@@ -35,6 +36,7 @@
 
     <Button
         android:id="@+id/loginbtn"
+        style="@style/Widget.App.Button"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,6 +44,7 @@
 
     <Button
         android:id="@+id/logintoreg"
+        style="@style/Widget.App.Button"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

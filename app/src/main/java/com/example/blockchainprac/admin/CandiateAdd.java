@@ -1,6 +1,7 @@
 package com.example.blockchainprac.admin;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
 import android.view.View;
@@ -10,10 +11,13 @@ import com.example.blockchainprac.R;
 import com.example.blockchainprac.databinding.ActivityAdminBinding;
 import com.example.blockchainprac.databinding.ActivityCandiateAddBinding;
 import com.example.blockchainprac.utils.AppConstants;
+import com.example.blockchainprac.utils.Loader;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class CandiateAdd extends AppCompatActivity {
 
+    Loader loadingInsuranceDialogueFragment;
+    boolean LOADER_SHOWING = false;
     View view;
 
     ActivityCandiateAddBinding binding;
@@ -37,6 +41,7 @@ public class CandiateAdd extends AppCompatActivity {
     }
 
     private void addCandidateToFirebase() {
+        showLoadingMain();
         String name = ""+ binding.name.getText().toString();
         String email = ""+ binding.email.getText().toString();
         String age = ""+ binding.age.getText().toString();
@@ -53,6 +58,7 @@ public class CandiateAdd extends AppCompatActivity {
 
         }else {
             Toast.makeText(this, "Please add all details", Toast.LENGTH_SHORT).show();
+            hideLoadingMain();
         }
     }
 
@@ -65,6 +71,42 @@ public class CandiateAdd extends AppCompatActivity {
             return false;
         }else{
             return true;
+        }
+    }
+
+    private void showLoadingMain() {
+        if (!LOADER_SHOWING) {
+            LOADER_SHOWING = true;
+
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            Loader fragment = (Loader) fragmentManager.findFragmentByTag("loadingDialog");
+
+            if (fragment == null) {
+                // No existing fragment found, create and show a new instance
+                loadingInsuranceDialogueFragment = Loader.newInstance("Loading, Please wait...");
+                loadingInsuranceDialogueFragment.setCancelable(false);
+                loadingInsuranceDialogueFragment.show(fragmentManager, "loadingDialog");
+            } else if (!fragment.isAdded()) {
+                // If the fragment exists but hasn't been added, show it again.
+                // This scenario is rare due to the lifecycle of DialogFragment.
+                loadingInsuranceDialogueFragment.show(fragmentManager, "loadingDialog");
+            }
+            // If the fragment is already added, it should be visible and nothing needs to be done.
+        }
+
+    }
+
+    private void hideLoadingMain() {
+        try {
+            LOADER_SHOWING = false;
+
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            Loader fragment = (Loader) fragmentManager.findFragmentByTag("loadingDialog");
+            if (fragment != null && fragment.isAdded()) {
+                fragment.dismiss();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }

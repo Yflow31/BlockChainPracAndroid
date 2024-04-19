@@ -4,72 +4,82 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context=".admin.CandiateAdd">
 
-    <com.google.android.material.textfield.TextInputLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:orientation="vertical">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/name"
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Add Name"
+                android:inputType="textPersonName"
+                android:theme="@style/Widget.Material3.TextInputEditText.OutlinedBox" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:hint="Add Name"
-            android:theme="@style/Widget.Material3.TextInputEditText.OutlinedBox" />
+            android:layout_marginTop="15dp">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Add Email"
+                android:inputType="textEmailAddress" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp">
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
-            android:id="@+id/email"
-            android:inputType="textEmailAddress"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Add Email" />
+            android:layout_marginTop="15dp">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <EditText
+                android:id="@+id/age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:hint="Add Age"
+                android:inputType="number" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp">
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
-            android:id="@+id/age"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:inputType="number"
             android:layout_height="wrap_content"
-            android:hint="Add Age" />
+            android:layout_marginTop="15dp">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Add Phone"
+                android:maxLength="10"
+                android:inputType="number" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp">
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
-            android:id="@+id/phone"
+        <Button
+            android:id="@+id/btn_add_candidate"
+            style="@style/Widget.App.Button"
             android:layout_width="match_parent"
-            android:inputType="phone"
             android:layout_height="wrap_content"
-            android:hint="Add Phone" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <Button
-        android:id="@+id/btn_add_candidate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Add Candidate" />
-
+            android:layout_marginTop="15dp"
+            android:text="Add Candidate" />
+    </LinearLayout>
 
 </LinearLayout>
